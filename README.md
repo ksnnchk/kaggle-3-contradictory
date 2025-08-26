@@ -1,6 +1,7 @@
 # Multilingual Natural Language Inference with DeBERTa
 
 This project implements a solution for the Natural Language Inference (NLI) task using a multilingual DeBERTa model. The system classifies logical relationships between sentence pairs in multiple languages into three categories: entailment, contradiction, or neutral.
+
 Kaggle hackathon: https://www.kaggle.com/competitions/contradictory-my-dear-watson
 
 ## Features
@@ -11,16 +12,38 @@ Kaggle hackathon: https://www.kaggle.com/competitions/contradictory-my-dear-wats
 - **Batch Processing**: Memory-efficient inference for large datasets
 - **Compatible Output**: Generates submission files in Kaggle competition format
 
+## Project Structure
+
+```
+/
+├── best_model/                 # Saved model and tokenizer
+│   ├── config.json            # Model configuration
+│   ├── model.safetensors      # Model weights
+│   └── tokenizer files        # Tokenizer configuration
+├── submission.csv             # Generated predictions
+├── train.py                   # Main training script
+└── requirements.txt           # Python dependencies
+```
 
 ## Installation & Setup
 
 1. **Clone the repository**
 ```bash
-git clone <repository-url>
-cd multilingual-nli-deberta
+git clone https://github.com/ksnnchk/kaggle-3-contradictory.git
+cd kaggle-3-contradictory
 ```
 
+2. **Install dependencies**
+```bash
+pip install torch transformers pandas scikit-learn numpy
+```
 
+Key dependencies:
+- torch>=2.0.0
+- transformers>=4.30.0
+- pandas>=1.5.0
+- scikit-learn>=1.2.0
+- numpy>=1.22.0
 
 ## Dataset
 
